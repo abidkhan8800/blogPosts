@@ -138,9 +138,13 @@ app.get('/dashboard/post',(req, res)=>{
             authorId: req.body.authorId
         }
     }).then(post=>{
-        console.log(post);
-        console.log(post.dataValues);
-        res.json(post.dataValues);
+        if(post){
+            console.log(post);
+            res.json(post);
+        }else{
+            res.json("post not found");
+            console.log("post not found");
+        }
     })
 })
 

@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "8a6d552f-82bd-4843-bbc8-f03056f5d677",
+		"name": "blogPost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3001",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"ann@gmail.com\",\n\t\"password\": \"apples\",\n\t\"name\": \"ann\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001",
+					"host": [
+						"localhost"
+					],
+					"port": "3001"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/dashboard/profile/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n\t\"authorId\": \"null\",\n\t\"id\":\"6\"\n}\n"
+				},
+				"url": {
+					"raw": "localhost:3001/dashboard/profile/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"dashboard",
+						"profile",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/dashboard",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"title1\",\n    \"body\": \"body1\",\n    \"authorId\": \"authorI6\",\n    \"slug\": \"slug1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/dashboard",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/dashboard/profile/edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n\t\"authorId\": \"authorI6\",\n\t\"id\":\"8\",\n\t\"title\": \"title is awesome\",\n    \"body\": \"post is awesome\"\n    \n    \n}\n"
+				},
+				"url": {
+					"raw": "localhost:3001/dashboard/profile/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"dashboard",
+						"profile",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/dashboard/post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"8\",\n\t\"authorId\": \"authorI6\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3001/dashboard/post",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"dashboard",
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
